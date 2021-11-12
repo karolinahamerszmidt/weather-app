@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="css/homework.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      data-auto-replace-svg="nest"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-header">
+        <h1 class="app-title">Weather</h1>
+        <form class="form">
+          <input type="text" placeholder="City" class="input-text" />
+          <input type="submit" value="Search" />
+          <input id="geolocation" type="button" value="Current location" />
+        </form>
+        <br />
+      </div>
+      <div class="city-weather-header">
+        <div class="city">
+          <h2 class="city-title">Warsaw</h2>
+          <div class="city-date"><small>24/7/2021</small></div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-6">
+            <div class="row row-today">
+              <div class="col-4">
+                <i class="fas fa-sun big-icon"></i>
+              </div>
+              <div class="col-4 today-temperature">
+                <div class="unit">28°C</div>
+                <div>Mostly sunny</div>
+              </div>
+              <div class="col-4">
+                <i class="fas fa-exchange-alt change-icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div>
+              <div class="row">
+                <div class="col-4">
+                  <div>
+                    <div>
+                      <div>32°C</div>
+                      <div>High</div>
+                    </div>
+                    <br />
+                    <div>
+                      <div>14°C</div>
+                      <div>Low</div>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div>
+                    <div>
+                      <div>7mph</div>
+                      <div>Wind</div>
+                    </div>
+                    <br />
+                    <div>
+                      <div>0%</div>
+                      <div>Rain</div>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div>
+                    <div>
+                      <div>05:27</div>
+                      <div>Sunrise</div>
+                    </div>
+                    <br />
+                    <div>
+                      <div>20:05</div>
+                      <div>Sunset</div>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="time-weather-header">
+          <div>
+            <br />
+            <div><strong>Today weather</strong></div>
+            <div class="row">
+              <div class="col-2">
+                <div class="card">
+                  <div>1AM</div>
+                  <i class="fas fa-sun small-icon"></i>
+                  <div>32°C</div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="card">
+                  <div>2AM</div>
+                  <i class="fas fa-sun small-icon"></i>
+                  <div>32°C</div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="card">
+                  <div>3AM</div>
+                  <i class="fas fa-sun small-icon"></i>
+                  <div>31°C</div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="card">
+                  <div>4AM</div>
+                  <i class="fas fa-sun small-icon"></i>
+                  <div>30°C</div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="card">
+                  <div>5AM</div>
+                  <i class="fas fa-sun small-icon"></i>
+                  <div>27°C</div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="card">
+                  <div>6AM</div>
+                  <i class="fas fa-sun small-icon"></i>
+                  <div>27°C</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <br />
+            <div><strong>Next 5 Days</strong></div>
+            <div class="row">
+              <div class="col-2">
+                <div>
+                  <div>Monday</div>
+                  <div>25/7</div>
+                </div>
+                <br />
+                <div>
+                  <div>Tuesday</div>
+                  <div>26/7</div>
+                </div>
+                <br />
+                <div>
+                  <div>Wednesday</div>
+                  <div>27/7</div>
+                </div>
+                <br />
+                <div>
+                  <div>Thursday</div>
+                  <div>28/8</div>
+                </div>
+                <br />
+                <div>
+                  <div>Friday</div>
+                  <div>29/9</div>
+                </div>
+                <br />
+              </div>
+              <div class="col-2 row-first">
+                <div>
+                  <i class="fas fa-sun icon"></i>
+                </div>
+                <br />
+                <div>
+                  <i class="fas fa-cloud-sun icon"></i>
+                </div>
+                <br />
+                <div>
+                  <i class="fas fa-cloud-sun-rain icon"></i>
+                </div>
+                <br />
+                <div>
+                  <i class="fas fa-cloud-sun icon"></i>
+                </div>
+                <br />
+                <div>
+                  <i class="fas fa-cloud-sun-rain icon"></i>
+                </div>
+                <br />
+              </div>
+              <div class="col-2 row-first">
+                <div>
+                  <div>26°C</div>
+                  <div>Low</div>
+                </div>
+                <br />
+                <div>
+                  <div>24°C</div>
+                  <div>Low</div>
+                </div>
+                <br />
+                <div>
+                  <div>22°C</div>
+                  <div>Low</div>
+                </div>
+                <br />
+                <div>
+                  <div>20°C</div>
+                  <div>Low</div>
+                </div>
+                <br />
+                <div>
+                  <div>20°C</div>
+                  <div>Low</div>
+                </div>
+                <br />
+              </div>
+              <div class="col-2 row-first">
+                <div>
+                  <div>30°C</div>
+                  <div>High</div>
+                </div>
+                <br />
+                <div>
+                  <div>27°C</div>
+                  <div>High</div>
+                </div>
+                <br />
+                <div>
+                  <div>25°C</div>
+                  <div>High</div>
+                </div>
+                <br />
+                <div>
+                  <div>25°C</div>
+                  <div>High</div>
+                </div>
+                <br />
+                <div>
+                  <div>24°C</div>
+                  <div>High</div>
+                </div>
+                <br />
+              </div>
+              <div class="col-2 row-first">
+                <div>
+                  <div>12mph</div>
+                  <div>Wind</div>
+                </div>
+                <br />
+                <div>
+                  <div>7mph</div>
+                  <div>Wind</div>
+                </div>
+                <br />
+                <div>
+                  <div>11mph</div>
+                  <div>Wind</div>
+                </div>
+                <br />
+                <div>
+                  <div>3mph</div>
+                  <div>Wind</div>
+                </div>
+                <br />
+                <div>
+                  <div>8mph</div>
+                  <div>Wind</div>
+                </div>
+                <br />
+              </div>
+              <div class="col-2 row-first">
+                <div>
+                  <div>0%</div>
+                  <div>Rain</div>
+                </div>
+                <br />
+                <div>
+                  <div>3%</div>
+                  <div>Rain</div>
+                </div>
+                <br />
+                <div>
+                  <div>75%</div>
+                  <div>Rain</div>
+                </div>
+                <br />
+                <div>
+                  <div>15%</div>
+                  <div>Rain</div>
+                </div>
+                <br />
+                <div>
+                  <div>88%</div>
+                  <div>Rain</div>
+                </div>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div></div>
+      <div></div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
